@@ -3,13 +3,13 @@ import { Text, View, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import BottomNav from '../components/BottomNav';
 
-const HomeScreen = ({ navigation }) => {
+const TimeTrackerScreen = ({ navigation }) => {
   return (
     <LinearGradient
       colors={['#cdfab1', '#cdfab1', '#84ce43']}
       style={styles.linearGradient}
     >
-      <Text style={styles.homeText}>Home Screen</Text>
+      <Text style={styles.mainText}>Time Tracker Screen</Text>
       <View style={styles.bottomNav}>
         <BottomNav navigation={navigation} />
       </View>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     justifyContent: 'space-between',
   },
-  homeText: {
+  mainText: {
     fontSize: 20,
     color: 'black',
     textAlign: 'center',
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default TimeTrackerScreen;
