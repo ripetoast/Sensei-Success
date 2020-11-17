@@ -9,6 +9,8 @@ import TasksScreen from './src/screens/TasksScreen';
 import TimeTrackerScreen from './src/screens/TimeTrackerScreen';
 import ToDoListScreen from './src/screens/ToDoListScreen';
 
+import { Provider as DataProvider } from './src/context/DataContext';
+
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -26,4 +28,10 @@ const App = () => {
   );
 };
 
-export default App;
+export default () => {
+  return (
+    <DataProvider>
+      <App />;
+    </DataProvider>
+  );
+};
